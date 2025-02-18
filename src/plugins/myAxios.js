@@ -3,7 +3,7 @@ import router from '../router/index.js'
 
 const request = axios.create({
   baseURL: import.meta.env.VITE_API_URL,
-  // baseURL: 'http://localhost:8080',
+  // baseURL: 'http://192.168.31.34:8080',
   timeout: 60000,
   withCredentials: true,
 })
