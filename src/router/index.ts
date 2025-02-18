@@ -1,7 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import { loginUserStore } from '@/stores/loginUserStore.ts'
 import { notification } from 'ant-design-vue'
-import { BorderTopOutlined } from '@ant-design/icons-vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),

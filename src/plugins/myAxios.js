@@ -2,7 +2,8 @@ import axios from 'axios'
 import router from '../router/index.js'
 
 const request = axios.create({
-  baseURL: 'http://localhost:8080',
+  baseURL: import.meta.env.VITE_API_URL,
+  // baseURL: 'http://localhost:8080',
   timeout: 60000,
   withCredentials: true,
 })
@@ -29,7 +30,7 @@ request.interceptors.response.use(
     if (response.data.code === 40100) {
       router.push({
         name: 'login',
-        replace: true
+        replace: true,
       })
     }
     return response.data
